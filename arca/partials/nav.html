@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar bg-light">
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" id="home-link" href="index.php">Arca</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="animal-link" href="animales.php">Animales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="clasificacion-link" href="clasificaciones.php">Clasificación</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="alimentacion-link" href="alimentaciones.php">Alimentación</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="habitat-link" href="habitats.php">Hábitat</a>
+            </li>
+            <!-- Dropdown -->
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Historial
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="animales_log.php">Animales</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="clasificaciones_log.php">Clasificación</a></li>
+                        <li><a class="dropdown-item" href="alimentaciones_log.php">Alimentación</a></li>
+                        <li><a class="dropdown-item" href="habitats_log.php">Hábitat</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    // Obtenemos el nombre del archivo actual
+    var currentPage = location.pathname.split('/').pop();
+
+    // Obtenemos los elementos de los enlaces
+    var homeLink = document.getElementById('home-link');
+    var animalLink = document.getElementById('animal-link');
+    var clasificacionLink = document.getElementById('clasificacion-link');
+    var alimentacionLink = document.getElementById('alimentacion-link');
+    var habitatLink = document.getElementById('habitat-link');
+
+    // Comparamos el nombre del archivo actual con los nombres de las páginas y agregamos la clase "active" al enlace correspondiente
+    if (currentPage === 'index.php') {
+        homeLink.classList.add('active');
+    } else if (currentPage === 'animal.php') {
+        animalLink.classList.add('active');
+    } else if (currentPage === 'clasificacion.php') {
+        clasificacionLink.classList.add('active');
+    } else if (currentPage === 'alimentacion.php') {
+        alimentacionLink.classList.add('active');
+    } else if (currentPage === 'habitat.php') {
+        habitatLink.classList.add('active');
+    }
+</script>

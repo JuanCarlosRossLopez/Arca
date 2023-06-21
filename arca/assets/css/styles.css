@@ -1,0 +1,6 @@
+.animal{
+    --bs-btn-color: #000000;
+    --bs-btn-border-color: #34CCCC;
+    --bs-btn-hover-bg: #34CCCC;
+    --bs-btn-hover-border-color: #34CCCC;
+}
